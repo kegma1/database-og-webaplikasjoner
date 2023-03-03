@@ -23,3 +23,4 @@ select ename, job from `stud_v23_kma150.emp` where job in (select distinct job f
 #oppgave 12
 select ename as Name, sal as Salary, sal/tot_sal*100 from `stud_v23_kma150.emp`, (select sum(sal) as tot_sal from `stud_v23_kma150.emp`) t group by empno order by sal
 #oppgave 13
+select dname as Departement, tot_sal as Sum, tot_sal/sal*100 as Prosentvis from `stud_v23_kma150.dept`, (select deptno as d, sum(sal) as tot_sal from `stud_v23_kma150.emp` group by deptno) t, (select sum(sal) as sal from `stud_v23_kma150.emp`) e where d = `stud_v23_kma150.dept`.deptno group by deptno order by tot_sal 
