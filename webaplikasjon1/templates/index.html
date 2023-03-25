@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block body %}
+<article>
+    <h1>Hva er Brainfuck</h1>
+    <p>
+        Brainfuck er et esoterisk programerings språk som var oppfunnet av Urban Müller i 1993, med mål om å lage et fullstendig språk med det minste kompilator som mulig. <br>
+        Dette klarte han med en kompilator på 240 bytes. Som et resultat er brainfuck et veldig simpelt språk, men er <a href="https://esolangs.org/wiki/Turing-complete">turing-complete</a> som vil si at gitt nokk tid kan brainfuck gjøre alt en turing maskin kan gjøre.
+    </p>
+    </article>
+    <article>
+    <h1>Hvordan fungerer Brainfuck</h1>
+    <p>
+        Brainfuck er et tape-basert programerings språk, som vil si at minnet er behanlet som en lang tape med verdier. <br>
+        I Brainfuck er minnet en tape med 3000 celler, hver celle kan lagre en byte. <br>
+        Brainfuck bruker også en peker som peker til en av cellene i tapen. <br>
+        Kode i Brainfuck er en strenge med opteratorer, alt annet text som ikke er Brainfuck operatorer vil bli behandlet som en kommentar.
+        Brainfuck består av 8 operatorer.
+        <h2>Liste av operatorer</h2>
+        <ul>
+            <li>
+                <p><b>+</b> : øker verdien i cellen man peker på med 1, hvis verdien er 255 vil den rulle over til 0</p>
+            </li>
+            <li>
+                <p><b>-</b> : synker verdien i cellen man peker på med 1, hvis verdien er 0 vil den rulle over til 255</p>
+            </li>
+            <li>
+                <p><b><</b> : flytter pekeren en celle til venstre</p>
+            </li>
+            <li>
+                <p><b>></b> : flytter pekeren en celle til høyre</p>
+            </li>
+            <li>
+                <p><b>[</b> : hopper til matchende <b>]</b> hvis verdien i cellen pekeren peker på er 0</p>
+            </li>
+            <li>
+                <p><b>]</b> : hopper til matchende <b>[</b> hvis verdien i cellen pekeren peker ikke er 0</p>
+            </li>
+            <li>
+                <p><b>.</b> : printer verdien i cellen pekeren peker på som et ascii tegn</p>
+            </li>
+            <li>
+                <p><b>,</b> : spørr brukeren om et tegn og lagrer ascii verdien i cellen pekeren peker på</p>
+            </li>
+        </ul>
+    </p>
+    </article>
+    <article>
+    <h1>Hello, World!</h1>
+    <p>
+        Her er et eksempel på et "Hello, World!" programm <br><br>
+        <code>++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.</code> <br><br>            
+        <a href="https://kegma1.github.io/bfi/">online Brainfuck tolker med animation</a>
+    </p>
+</article>
+<a href="/kontaktskjema">Kontakt skjema</a>
+{% endblock %}

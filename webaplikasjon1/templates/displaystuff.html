@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+<section>
+    <p><b>Navn: </b> {{ name }}</p>
+    <p><b>E-mail: </b> {{ email }}</p>
+    <p><b>Birthday</b> {{ b_day }}</p>
+    <p><b>Home page: </b> {{ web_url }}</p>
+    <p><b>Grade: </b> {{ grade }}</p>
+    <p><b>Message: </b> {{ msg }}</p>
+</section>
+<a href="/kontaktskjema"><- Tilbake</a>
+{% endblock %}
